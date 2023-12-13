@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+Use App\Http\Controllers\MusicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view("layouts.default");
-});
+    return view('layouts.default');
+})->name("home");
+Route::get('/music', [MusicController::class, 'index'])->name("musicsList");
+
+Route::get('/music/{id}', [MusicController::class, 'getMusic'])->name("getMusic");
