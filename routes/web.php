@@ -17,6 +17,6 @@ Use App\Http\Controllers\MusicController;
 Route::get('/', function () {
     return view('layouts.default');
 })->name("home");
-Route::get('/music', [MusicController::class, 'index'])->name("musicsList");
+Route::get('/music', [MusicController::class, 'index'])->name("music");
 
-Route::get('/music/{id}', [MusicController::class, 'getMusic'])->name("getMusic");
+Route::get('/music/{id}', [MusicController::class, 'getMusic'])->name("music");

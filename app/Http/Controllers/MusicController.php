@@ -11,6 +11,7 @@ class MusicController extends Controller
         return view("pesquisa", [
             'musics' => $musics
         ]);
+
     }
 
     public function getMusic($id){
@@ -19,4 +20,5 @@ class MusicController extends Controller
             'music' => $music
         ]);
     }
+
 }
