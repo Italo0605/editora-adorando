@@ -8,7 +8,7 @@
             <div class=" flex flex-col justify-center items-center">
                 <div class="relative flex flex-col text-center">
                     <div class="p-40 text-white rounded-full bg-[#7DA5D2] w-fit"></div>
-                    <p class="text-white relative bottom-[12rem] right-1.5 text-3xl">JÁ DECIDI QUE<br>VOU GRAVAR</p>
+                    <p class="text-white relative bottom-[12rem] right-1.5 text-3xl "">JÁ DECIDI QUE<br>VOU GRAVAR</p>
                 </div>
                 <div class="relative flex flex-col text-center bottom-[12rem]  left-[6rem]">
                     <div class="p-28 text-white rounded-full bg-white  w-fit relative"></div>
@@ -25,7 +25,7 @@
             <p class="text-xl">E AGUARDAR NOSSA EQUIPE ENTRAR EM CONTATO:</p>
             <div class="mt-6">
                 <img src="images/menuIcon.svg" alt="" class="inline w-20">
-                <a href=" " class="rounded-full px-32 py-4 bg-white border-8 border-[#00296B] font-dm-sans font-bold text-2xl">FORMULÁRIO</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_A3ruKUWQEy9j96cwrOrdHVsWgHCEXP6lLMD5aIEaV7T7LQ/viewform" class="rounded-full px-32 py-4 bg-white border-8 border-[#00296B] font-dm-sans font-bold text-2xl">FORMULÁRIO</a>
             </div>
         </div>
     </div>
