@@ -13,7 +13,7 @@
 
     <div id="card-list" class="flex flex-col items-center mt-5">
         @foreach ($musics as $music)
-        <a id="card" class="bg-white border rounded-lg flex content-center max-w-screen-md w-full mt-3" href="{{route("music", ['id' => $music->id])}}">
+        <a id="card" class="bg-white border rounded-lg flex content-center max-w-screen-md w-full mt-3" href="{{route("musicSearch", ['id' => $music->id])}}">
             <img src="/images/playIcon.svg" alt="play" width="30" class= "my-auto mx-2">
             <div class="my-1">
                 <h1 class="text-2xl">{{$music->name}}</h1>
