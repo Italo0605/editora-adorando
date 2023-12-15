@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+Use App\Http\Controllers\MusicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view("layouts.default");
-});
+    return view('welcome');
+})->name("home");
+
+Route::get('/form', function () {
+    return view('FormPage');
+})->name("form-page");
+
+Route::get('/mail', function () {
+    return view('MailPage');
+})->name("mail-page");
+
+Route::get('/music', [MusicController::class, 'index'])->name("music");
+
+Route::get('/music/{id}', [MusicController::class, 'getMusic'])->name("music");
+Route::get('/search',[MusicController::class, 'search']);
+Route::get('/download/{id}', [MusicController::class, 'downloadMusic'])->name('music.download');
