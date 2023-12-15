@@ -37,4 +37,13 @@ class MusicController extends Controller
         return Response::make($content, 200, $headers);
     }
 
+    public function store(Request $request){
+        $music = new Music();
+        $music->name  = $request->name;
+        $music->lyrics = $request->lyrics;
+        $music->singers = $request->singers;
+        $music->save();
+        return view('insertMusic');
+    }
+
 }

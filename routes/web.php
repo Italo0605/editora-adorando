@@ -31,3 +31,7 @@ Route::get('/music', [MusicController::class, 'index'])->name("music");
 Route::get('/music/{id}', [MusicController::class, 'getMusic'])->name("musicSearch");
 Route::get('/search',[MusicController::class, 'search']);
 Route::get('/download/{id}', [MusicController::class, 'downloadMusic'])->name('music.download');
+Route::post('/music', [MusicController::class, 'store'])->name('music.store');
+Route::get('/create/music', function(){
+    return view('insertMusic');
+})->name('music.create');
