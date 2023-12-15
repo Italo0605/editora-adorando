@@ -9,10 +9,10 @@
                     <h1 class="text-3xl">{{$music->name}}</h1>
                     <p>{{$music->singers}}</p>
                 </div>
-                <button class="flex items-center px-4 py-2 border rounded-lg gap-2 min-w-[180px] justify-center">
+                <a class="flex items-center px-4 py-2 border rounded-lg gap-2 min-w-[180px] justify-center" href="{{ route('music.download', ['id' => $music->id]) }}">
                     <img src="/images/downloadIcon.svg" alt="downloadIco">
                     <h2 class="text-lg font-semibold ">Baixar Letra</h2>
-                </button>
+                </a>
             </div>
             <div id="content">
                 <h1 class="text-3xl mb-3">Letra</h1>
