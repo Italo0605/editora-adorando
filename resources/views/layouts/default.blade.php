@@ -56,7 +56,7 @@
 </header>
 
     {{-- CONTENT HERE --}}
-    <div class="flex-grow bg-[url('/images/bgImage.png')] bg-no-repeat bg-center bg-cover">
+    <div class="flex-grow bg-[url('/images/bgImage.svg')] bg-no-repeat bg-center bg-cover">
         @yield("content")
     </div>
         

@@ -5,13 +5,13 @@
             <div class="text-white flex items-center justify-center pt-7 max-w-[1100px] mx-auto ">
                 <div>
                     <p class="text-2xl tracking-wide">Bem-vindo à Editora Adorando, uma das <br> maiores administradoras de obras <br> musicais cristãs da América Latina.</p>
-                    <button class="text-sm bg-[#7DA5D2] px-8 py-4 rounded-full mt-4 font-semibold transition duration-500 hover:bg-white hover:text-[#00296B]">SAIBA MAIS</button> 
+                    <button href="#pag2" class="text-sm bg-[#7DA5D2] px-8 py-4 rounded-full mt-4 font-semibold transition duration-500 hover:bg-white hover:text-[#00296B]">SAIBA MAIS</button> 
                 </div>
                 <img src="/images/mocaHero.svg" alt="" class="w-[30vw] self-end pt-[10vh]">
             </div>
         </div>
 
-        <div class="bg-[#7DA5D2]">
+        <div class="bg-[#7DA5D2] " id="pag2">
             <div class="flex py-30 justify-between max-w-[1100px] mx-auto items-center h-[80vh]">
                 <img src="/images/aLanding.svg" alt="" class="w-96">
                 <div class="text-end">
