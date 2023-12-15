@@ -16,7 +16,7 @@
             </div>
             <div id="content">
                 <h1 class="text-3xl mb-3">Letra</h1>
-                <div>
+                <div class="whitespace-pre-line text-start">
                     {{$music->lyrics}}
                 </div>
             </div>
