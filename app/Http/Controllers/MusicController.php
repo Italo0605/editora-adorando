@@ -31,6 +31,7 @@ class MusicController extends Controller
         $content .= "Letra da Música:\n" . $music->lyrics;
 
         $headers = [
+            'Content-Security-Policy' => 'upgrade-insecure-requests',
             'Content-Type' => 'text/plain',
             'Content-Disposition' => 'attachment; filename="Music-' . Str::slug($music->name) . '.txt"',
         ];
