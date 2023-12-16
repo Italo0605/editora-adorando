@@ -21,7 +21,7 @@
             <h1 class="text-5xl mb-4">É SIMPLES</h1>
             <p class="text-xl">BASTA PREENCHER ESTE FORMULÁRIO</p>
             <p class="text-xl">E AGUARDAR NOSSA EQUIPE ENTRAR EM CONTATO:</p>
-            <div class="mt-6">
+            <div class="mt-6 flex items-center">
                 <img src="images/menuIcon.svg" alt="" class="inline w-20">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_A3ruKUWQEy9j96cwrOrdHVsWgHCEXP6lLMD5aIEaV7T7LQ/viewform" class="rounded-full px-32 py-4 bg-white border-8 border-[#00296B] font-dm-sans font-bold text-2xl">FORMULÁRIO</a>
             </div>
