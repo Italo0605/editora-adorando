@@ -1,29 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              fontFamily: {
-                "didact" : ['Didact Gothic', 'sans-serif']
-              }
-            }
-          }
-        }
-      </script>
-    <title>Document</title>
-</head>
+@extends('layouts.head')
 <body class="flex flex-col min-h-screen font-didact">
   <header class="bg-[#00296B]">
-    <div class="container mx-auto flex justify-between items-center max-w-5xl p-2 items-center">
+    <div class="container mx-auto flex justify-between items-center max-w-screen-xl py-7 items-center">
         {{-- IMAGE --}}
         <a href="{{route("home")}}" >
           <img src="/images/logoAdorandoWhite.svg" alt="logo">
