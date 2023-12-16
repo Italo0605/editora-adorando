@@ -6,10 +6,10 @@
         <div class="container flex justify-center items-center mx-auto pt-4">
             <img src="/images/girlForms.svg" alt="" class="self-end">
             <div class="flex flex-col self-start items-center">
-                <div  class="group cursor-pointer w-80 h-80 bg-[#7DA5D2] rounded-full flex justify-center items-center relative right-[80px] border-8 border-[#7DA5D2] hover:bg-white hover:border-8 hover:border-[#7DA5D2] transition-colors duration-500">
+                <div  class="group cursor-pointer min-w-80 w-80 h-80 bg-[#7DA5D2] rounded-full flex justify-center items-center relative right-[80px] border-8 border-[#7DA5D2] hover:bg-white hover:border-8 hover:border-[#7DA5D2] transition-colors duration-500">
                     <p class="text-white text-3xl transition-colors group-hover:text-black transition-colors duration-500">JÁ DECIDI QUE<br>VOU GRAVAR</p>
                 </div>
-                <div class="group cursor-pointer flex justify-center items-center w-48 h-48 bg-white border-8 border-white rounded-full relative -right-[50px] -top-[90px] hover:bg-[#00296B] hover:border-8 hover:border-[##00266B] transition-colors duration-500">
+                <div class="group cursor-pointer flex justify-center items-center min-w-48 w-48  h-48 bg-white border-8 border-white rounded-full relative -right-[50px] -top-[90px] hover:bg-[#00296B] hover:border-8 transition-colors duration-500">
                     <p class="text-[#00296B] text-2xl group-hover:text-white transition-colors duration-500">E AGORA?</p>
                 </div>
             </div>
