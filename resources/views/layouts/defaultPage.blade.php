@@ -10,7 +10,7 @@
             </a>         
                 {{-- NAV-BAR --}}
             <nav class="flex justify-between items-center gap-10 items-center text-[#4977AB]">
-              <h3 class="cursor-pointer text-sm font-semibold transition duration-300 hover:text-gray-600"><a href="{{route("home")}}">Início</a></h3>
+              <h3 class="cursor-pointer text-sm font-semibold transition duration-300 hover:ttext-white"><a href="{{route("home")}}">Início</a></h3>
               
               <li class="group dropdown  px-4 text-sm font-semibold cursor-pointer font-bold text-base tracking-wide list-none " >
                 <a>Pesquisa e Licença Autoral</a>
@@ -27,8 +27,8 @@
                 </div>
               </li>
                   
-              <h3 class="cursor-pointer text-sm font-semibold transition duration-300 hover:text-gray-600">Quem Somos</h3>
-              <h3 class="cursor-pointer text-sm font-semibold transition duration-300 hover:text-gray-600">Artigos</h3>
+              <h3 class="cursor-pointer text-sm font-semibold transition duration-300 hover:text-white">Quem Somos</h3>
+              <h3 class="cursor-pointer text-sm font-semibold transition duration-300 hover:text-white">Artigos</h3>
             </nav>
             {{-- LOGIN Button --}}
             <button class="text-white border-2 rounded-full px-6 py-2 text-sm font-bold hover:bg-white hover:border-transparent hover:text-[#00296B] transition duration-500">LOGIN</button>

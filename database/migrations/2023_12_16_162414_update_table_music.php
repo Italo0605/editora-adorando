@@ -21,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::table('table_musics', function (Blueprint $table) {
+            $table->dropColumn(['br_name', 'version']);
+        });
     }
 };

@@ -5,7 +5,7 @@
             <p class="text-xl">Pesquise e proteja direitos autorais de músicas conosco. Garanta que sua música respeite a autoria e a lei. Estamos aqui para ajudar.</p>
         </div>
 
-        <form id="search-bar" class="flex justify-center rounded-full w-fit mx-auto w-full px-2 py-2 bg-white" method="GEt">
+        <form id="search-bar" class="flex justify-center rounded-full w-fit mx-auto w-full px-2 py-3 bg-white" method="GET">
             <input wire:model.live="search" type="text" name="search-button" id="search-button" class="w-full ml-2 focus:outline-none text-black">
             <img src="/images/lupa.svg" alt="">
         </form>
