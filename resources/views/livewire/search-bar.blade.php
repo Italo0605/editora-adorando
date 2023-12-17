@@ -16,7 +16,7 @@
         <a id="card" class="bg-white border rounded-lg flex content-center max-w-screen-md w-full mt-3 hover:bg-Bopeblue" href="{{route("musicSearch", ['id' => $music->id])}}">
             <img src="/images/playIcon.svg" alt="play" width="30" class= "my-auto mx-2">
             <div class="my-1">
-                <h1 class="text-2xl">{{$music->name}}</h1>
+                <h1 class="text-2xl capitalize">{{Str::lower($music->name)}}</h1>
                 <p class="text-sm">{{$music->singers}}</p>
             </div>
         </a>

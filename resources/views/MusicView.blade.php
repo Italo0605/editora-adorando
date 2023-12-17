@@ -16,9 +16,23 @@
                 </a>
             </div>
             <div id="content">
-                <h1 class="text-3xl mb-3">Letra</h1>
-                <div class="whitespace-pre-line text-start">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-3xl mb-3">Letra</h1>
+                    <ul id="buttons" class=" flex w-20 gap-1 border-2 rounded-md">
+            
+                        <li id="brasilEnabled" class="visible"><img src="/images/bandeiraBrasil.svg" alt=""></li>
+                        <li id="brasilDisabled" class="hidden"><img src="/images/bandeiraBrasilDisabled.svg" alt=""></li>
+            
+                        <li id="EuaEnabled" class="hidden"><img src="/images/bandeiraEua.svg" alt=""></li>
+                        <li id="EuaDisabled" class="visible"><img src="/images/bandeiraEuaDisabled.svg" alt=""></li>
+            
+                    </ul>
+                </div>
+                <div id="brasilVer" class="whitespace-pre-line text-start visible">
                     {{$music->lyrics}}
+                </div>
+                <div id='englishVer' class="whitespace-pre-line text-start hidden">
+                    {{$music->englishVer}}
                 </div>
                 <p class="mt-10 text-center">Copyright © 2021 and this translation © 2021 From The Void (SESAC) /
                     FairTrade Tunes (SESAC) / Integrity's Praise! Music (BMI) / A Wong Made
@@ -29,4 +43,24 @@
             </div>
         </div>
     </section>
+    <script>
+        eua = document.querySelector('#EuaDisabled');
+        eua.addEventListener('click', function(){
+            document.querySelector('#EuaEnabled').classList.replace('hidden', 'visible');
+            document.querySelector('#EuaDisabled').classList.replace('visible', 'hidden');
+            document.querySelector('#brasilEnabled').classList.replace('visible', 'hidden');
+            document.querySelector('#brasilDisabled').classList.replace('hidden', 'visible');
+            document.querySelector('#brasilVer').classList.replace('visible', 'hidden');
+            document.querySelector('#englishVer').classList.replace('hidden', 'visible');
+        });
+        brasil = document.querySelector('#brasilDisabled');
+        brasil.addEventListener('click', function(){
+            document.querySelector('#brasilDisabled').classList.replace('visible', 'hidden');
+            document.querySelector('#brasilEnabled').classList.replace('hidden', 'visible');
+            document.querySelector('#EuaEnabled').classList.replace('visible', 'hidden');
+            document.querySelector('#EuaDisabled').classList.replace('hidden', 'visible');
+            document.querySelector('#englishVer').classList.replace('visible', 'hidden');
+            document.querySelector('#brasilVer').classList.replace('hidden', 'visible');
+        });
+    </script>
 @endsection
