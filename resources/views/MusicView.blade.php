@@ -20,8 +20,8 @@
                     <h1 class="text-3xl mb-3">Letra</h1>
                     <ul id="buttons" class=" flex w-20 gap-1 border-2 rounded-md">
             
-                        <li id="brasilEnabled" class="visible"><img src="/images/bandeiraBrasil.svg" alt=""></li>
-                        <li id="brasilDisabled" class="hidden"><img src="/images/bandeiraBrasilDisabled.svg" alt=""></li>
+                        <li id="brasilEnabled" class="visible transition-opacity duration-500 ease-in-out"><img src="/images/bandeiraBrasil.svg" alt=""></li>
+                        <li id="brasilDisabled" class="hidden transition-opacity duration-500 ease-in-out"><img src="/images/bandeiraBrasilDisabled.svg" alt=""></li>
             
                         <li id="EuaEnabled" class="hidden"><img src="/images/bandeiraEua.svg" alt=""></li>
                         <li id="EuaDisabled" class="visible"><img src="/images/bandeiraEuaDisabled.svg" alt=""></li>
@@ -43,24 +43,45 @@
             </div>
         </div>
     </section>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
-        eua = document.querySelector('#EuaDisabled');
-        eua.addEventListener('click', function(){
-            document.querySelector('#EuaEnabled').classList.replace('hidden', 'visible');
-            document.querySelector('#EuaDisabled').classList.replace('visible', 'hidden');
-            document.querySelector('#brasilEnabled').classList.replace('visible', 'hidden');
-            document.querySelector('#brasilDisabled').classList.replace('hidden', 'visible');
-            document.querySelector('#brasilVer').classList.replace('visible', 'hidden');
-            document.querySelector('#englishVer').classList.replace('hidden', 'visible');
+        // eua = document.querySelector('#EuaDisabled');
+        // eua.addEventListener('click', function(){
+        //     document.querySelector('#EuaEnabled').classList.replace('hidden', 'visible');
+        //     document.querySelector('#EuaDisabled').classList.replace('visible', 'hidden');
+        //     document.querySelector('#brasilEnabled').classList.replace('visible', 'hidden');
+        //     document.querySelector('#brasilDisabled').classList.replace('hidden', 'visible');
+        //     document.querySelector('#brasilVer').classList.replace('visible', 'hidden');
+        //     document.querySelector('#englishVer').classList.replace('hidden', 'visible');
+        // });
+        // brasil = document.querySelector('#brasilDisabled');
+        // brasil.addEventListener('click', function(){
+        //     document.querySelector('#brasilDisabled').classList.replace('visible', 'hidden');
+        //     document.querySelector('#brasilEnabled').classList.replace('hidden', 'visible');
+        //     document.querySelector('#EuaEnabled').classList.replace('visible', 'hidden');
+        //     document.querySelector('#EuaDisabled').classList.replace('hidden', 'visible');
+        //     document.querySelector('#englishVer').classList.replace('visible', 'hidden');
+        //     document.querySelector('#brasilVer').classList.replace('hidden', 'visible');
+        // });
+        $(document).ready(function() {
+
+        $('#EuaDisabled').click(function() {
+            toggleVisibility('#EuaEnabled', '#EuaDisabled');
+            toggleVisibility('#brasilDisabled', '#brasilEnabled');
+            toggleVisibility('#englishVer', '#brasilVer');
         });
-        brasil = document.querySelector('#brasilDisabled');
-        brasil.addEventListener('click', function(){
-            document.querySelector('#brasilDisabled').classList.replace('visible', 'hidden');
-            document.querySelector('#brasilEnabled').classList.replace('hidden', 'visible');
-            document.querySelector('#EuaEnabled').classList.replace('visible', 'hidden');
-            document.querySelector('#EuaDisabled').classList.replace('hidden', 'visible');
-            document.querySelector('#englishVer').classList.replace('visible', 'hidden');
-            document.querySelector('#brasilVer').classList.replace('hidden', 'visible');
+
+        $('#brasilDisabled').click(function() {
+            toggleVisibility('#brasilEnabled', '#brasilDisabled');
+            toggleVisibility('#EuaDisabled', '#EuaEnabled');
+            toggleVisibility('#brasilVer', '#englishVer');
         });
+
+        function toggleVisibility(show, hide) {
+            $(hide).fadeOut(400, function() {
+                $(show).fadeIn(400);
+            });
+        }
+    });
     </script>
 @endsection
