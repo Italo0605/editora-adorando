@@ -41,8 +41,10 @@ class MusicController extends Controller
     public function store(Request $request){
         $music = new Music();
         $music->name  = $request->name;
-        $music->lyrics = $request->lyrics;
         $music->singers = $request->singers;
+        $music->lyrics = $request->lyrics;
+        $music->englishVer = $request->englishVer;
+        $music->copyright = $request->copyright;
         $music->save();
         return view('insertMusic');
     }
