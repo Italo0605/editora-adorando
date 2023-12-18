@@ -7,8 +7,8 @@
                 <img src="/images/playIcon.svg" alt="play" width="40" height="50">
                 <div>
                     <h1 class="text-3xl capitalize">{{Str::lower($music->name)}}</h1>
-                    <p class="text-[#7C7C7C]">{{$music->singers}}</p>
-                    <p>Versão: {{$music->version}}</p>
+                    <p class="text-[#7C7C7C] capitalize">{{Str::lower($music->singers)}}</p>
+                    <p class="capitalize font-semibold">Versão: {{Str::lower($music->version)}}</p>
                 </div>
                 <a class="flex items-center px-4 py-2 border rounded-lg gap-2 min-w-[180px] justify-center" href="{{ route('music.download', ['id' => $music->id]) }}">
                     <img src="/images/downloadIcon.svg" alt="downloadIco">

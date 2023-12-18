@@ -18,7 +18,7 @@
                 <img id="whiteIco" src="/images/whitePlayIco.svg" alt="play" width="30" class= "my-auto mx-2 hidden transition-all duration-300">
                 <div class="my-1">
                     <h1 class="text-2xl capitalize group-hover:text-white transition-all duration-300">{{Str::lower($music->name)}}</h1>
-                    <p class="text-sm group-hover:text-white transition-all duration-300">{{$music->singers}}</p>
+                    <p class="text-sm capitalize text-[#7C7C7C] group-hover:text-white transition-all duration-300">{{Str::lower($music->singers)}}</p>
                 </div>
             </a>
         @endforeach
