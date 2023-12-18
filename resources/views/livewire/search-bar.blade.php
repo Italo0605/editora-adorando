@@ -13,13 +13,33 @@
 
     <div id="card-list" class="flex flex-col items-center mt-5">
         @foreach ($musics as $music)
-        <a id="card" class="bg-white border rounded-lg flex content-center max-w-screen-md w-full mt-3 hover:bg-Bopeblue" href="{{route("musicSearch", ['id' => $music->id])}}">
-            <img src="/images/playIcon.svg" alt="play" width="30" class= "my-auto mx-2">
+        <a id="card" class="group bg-white border rounded-lg flex content-center max-w-screen-md w-full mt-3 hover:bg-[#4977AB] transition-all duration-300" href="{{route("musicSearch", ['id' => $music->id])}}">
+            <img id="blueIco" src="/images/playIcon.svg" alt="play" width="30" class= "my-auto mx-2 transition-all duration-300">
+            <img id="whiteIco" src="/images/whitePlayIco.svg" alt="play" width="30" class= "my-auto mx-2 hidden transition-all duration-300">
             <div class="my-1">
-                <h1 class="text-2xl capitalize">{{Str::lower($music->name)}}</h1>
-                <p class="text-sm">{{$music->singers}}</p>
+                <h1 class="text-2xl capitalize group-hover:text-white transition-all duration-300">{{Str::lower($music->name)}}</h1>
+                <p class="text-sm group-hover:text-white transition-all duration-300">{{$music->singers}}</p>
             </div>
         </a>
         @endforeach
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+    // Função para trocar o caminho da imagem
+    function changeImagePath(element, newImagePath) {
+        $(element).fadeOut(250, function(){
+            $(this).attr('src', newImagePath).fadeIn(250);
+        });
+    }
+
+    // Exemplo de uso ao passar o mouse sobre o elemento com id 'card'
+    $('#card').mouseenter(function () {
+        changeImagePath('#blueIco', 'images/whitePlayIco.svg');
+    }).mouseleave(function () {
+        changeImagePath('#blueIco', 'images/playIcon.svg');
+    });
+});
+    </script>
 </section>
+
