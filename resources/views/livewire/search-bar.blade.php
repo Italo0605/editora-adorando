@@ -13,7 +13,7 @@
 
     <div id="card-list" class="flex flex-col items-center mt-5">
             @foreach ($musics as $music)
-            <a id="card" class="group bg-white border rounded-lg flex content-center max-w-screen-md w-full mt-3 hover:bg-[#4977AB] transition-all duration-300" href="{{route("musicSearch", ['id' => $music->id])}}">
+            <a  class="card group bg-white border rounded-lg flex content-center max-w-screen-md w-full mt-3 hover:bg-[#4977AB] transition-all duration-300" href="{{route("musicSearch", ['id' => $music->id])}}">
                 <img id="blueIco" src="/images/playIcon.svg" alt="play" width="30" class= "my-auto mx-2 transition-all duration-300">
                 <img id="whiteIco" src="/images/whitePlayIco.svg" alt="play" width="30" class= "my-auto mx-2 hidden transition-all duration-300">
                 <div class="my-1">
@@ -32,7 +32,7 @@
             });
         }
 
-        $('#card').mouseenter(function () {
+        $('.card').mouseenter(function () {
             changeImagePath('#blueIco', 'images/whitePlayIco.svg');
         }).mouseleave(function () {
             changeImagePath('#blueIco', 'images/playIcon.svg');
