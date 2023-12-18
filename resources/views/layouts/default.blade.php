@@ -3,7 +3,7 @@
 @extends('layouts.head')
 <body class="flex flex-col min-h-screen font-didact">
   <header class="bg-[#00296B]">
-    <div class="container mx-auto flex justify-between items-center max-w-screen-xl py-7 items-center">
+    <div class="container mx-auto flex justify-between items-center max-w-screen-xl py-7 items-center z-50">
         {{-- IMAGE --}}
         <a href="{{route("home")}}" >
           <img src="/images/logoAdorandoWhite.svg" alt="logo">
