@@ -13,9 +13,8 @@
 
     <div id="card-list" class="flex flex-col items-center mt-5">
             @foreach ($musics as $music)
-            <a  class="card group bg-white border rounded-lg flex content-center max-w-screen-md w-full mt-3 hover:bg-[#4977AB] transition-all duration-300" href="{{route("musicSearch", ['id' => $music->id])}}">
-                <img id="blueIco" src="/images/playIcon.svg" alt="play" width="30" class= "my-auto mx-2 transition-all duration-300">
-                <img id="whiteIco" src="/images/whitePlayIco.svg" alt="play" width="30" class= "my-auto mx-2 hidden transition-all duration-300">
+            <a class="card group bg-white border rounded-lg flex content-center max-w-screen-md w-full mt-3 hover:bg-[#4977AB] transition-all duration-300" href="{{route("musicSearch", ['id' => $music->id])}}">
+                <img src="/images/playIcon.svg" alt="play" width="30" class= "my-auto mx-2 transition-all duration-300 blueIco">
                 <div class="my-1">
                     <h1 class="text-2xl capitalize group-hover:text-white transition-all duration-300">{{Str::lower($music->name)}}</h1>
                     <p class="text-sm capitalize text-[#7C7C7C] group-hover:text-white transition-all duration-300">{{Str::lower($music->singers)}}</p>
@@ -27,15 +26,15 @@
     <script>
     $(document).ready(function () {
         function changeImagePath(element, newImagePath) {
-            $(element).fadeOut(250, function(){
-                $(this).attr('src', newImagePath).fadeIn(250);
+            $(element).find('.blueIco').fadeOut(300, function(){
+                $(this).attr('src', newImagePath).fadeIn(300);
             });
         }
 
         $('.card').mouseenter(function () {
-            changeImagePath('#blueIco', 'images/whitePlayIco.svg');
+            changeImagePath(this, 'images/whitePlayIco.svg');
         }).mouseleave(function () {
-            changeImagePath('#blueIco', 'images/playIcon.svg');
+            changeImagePath(this, 'images/playIcon.svg');
         });
     });
     </script>
