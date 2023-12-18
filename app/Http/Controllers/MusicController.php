@@ -42,6 +42,7 @@ class MusicController extends Controller
         $music = new Music();
         $music->name  = $request->name;
         $music->singers = $request->singers;
+        $music->version = $request->version;
         $music->lyrics = $request->lyrics;
         $music->englishVer = $request->englishVer;
         $music->copyright = $request->copyright;

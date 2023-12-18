@@ -4,6 +4,9 @@
         <h1>nome</h1>
         <input type="text" name="name"><br>
 
+        <h1>nomeBR</h1>
+        <input type="text" name="version"><br>
+
         <h1>Singers</h1>
         <input type="text" name="singers"><br>
 
