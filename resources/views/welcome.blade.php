@@ -4,7 +4,7 @@
         <div class="h-[90.2vh] bg-[#00296B]">
             <div class="text-white flex items-center justify-center mx-auto h-full flex-wrap">
                 <div class="shrink-0">
-                    <p class="text-3xl tracking-wide">Bem-vindo à Editora Adorando, uma das <br> maiores administradoras de obras <br> musicais cristãs da América Latina.</p>
+                    <p class="text-3xl tracking-wide ">Bem-vindo à Editora Adorando, uma das <br> maiores administradoras de obras <br> musicais cristãs da América Latina.</p>
                     <button id="saibaMaisBtn" class="text-sm bg-[#7DA5D2] px-8 py-4 rounded-full mt-4 font-semibold transition duration-500 hover:bg-white hover:text-[#00296B]">SAIBA MAIS</button> 
                 </div>
                 <img src="/images/mocaHero.svg" alt="" class="self-end">

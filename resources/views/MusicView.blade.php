@@ -34,54 +34,33 @@
                 <div id='englishVer' class="whitespace-pre-line text-start hidden">
                     {{$music->englishVer}}
                 </div>
-                <p class="mt-10 text-center">Copyright © 2021 and this translation © 2021 From The Void (SESAC) /
-                    FairTrade Tunes (SESAC) / Integrity's Praise! Music (BMI) / A Wong Made
-                    Write Publishing (BMI) / Fun Attic Music (ASCAP) / Pure Psalms Music (BMI).
-                    All rights reserved. Used by permission.
-                    Editora Adorando (Translation)
-                    edvania.veloso@onimusic.com.br</p>
+                <p class="mt-10 text-center">
+                    {{$music->copyright}}
+                </p>
             </div>
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
-        // eua = document.querySelector('#EuaDisabled');
-        // eua.addEventListener('click', function(){
-        //     document.querySelector('#EuaEnabled').classList.replace('hidden', 'visible');
-        //     document.querySelector('#EuaDisabled').classList.replace('visible', 'hidden');
-        //     document.querySelector('#brasilEnabled').classList.replace('visible', 'hidden');
-        //     document.querySelector('#brasilDisabled').classList.replace('hidden', 'visible');
-        //     document.querySelector('#brasilVer').classList.replace('visible', 'hidden');
-        //     document.querySelector('#englishVer').classList.replace('hidden', 'visible');
-        // });
-        // brasil = document.querySelector('#brasilDisabled');
-        // brasil.addEventListener('click', function(){
-        //     document.querySelector('#brasilDisabled').classList.replace('visible', 'hidden');
-        //     document.querySelector('#brasilEnabled').classList.replace('hidden', 'visible');
-        //     document.querySelector('#EuaEnabled').classList.replace('visible', 'hidden');
-        //     document.querySelector('#EuaDisabled').classList.replace('hidden', 'visible');
-        //     document.querySelector('#englishVer').classList.replace('visible', 'hidden');
-        //     document.querySelector('#brasilVer').classList.replace('hidden', 'visible');
-        // });
         $(document).ready(function() {
-
-        $('#EuaDisabled').click(function() {
-            toggleVisibility('#EuaEnabled', '#EuaDisabled');
-            toggleVisibility('#brasilDisabled', '#brasilEnabled');
-            toggleVisibility('#englishVer', '#brasilVer');
-        });
-
-        $('#brasilDisabled').click(function() {
-            toggleVisibility('#brasilEnabled', '#brasilDisabled');
-            toggleVisibility('#EuaDisabled', '#EuaEnabled');
-            toggleVisibility('#brasilVer', '#englishVer');
-        });
-
-        function toggleVisibility(show, hide) {
-            $(hide).fadeOut(400, function() {
-                $(show).fadeIn(400);
+            
+            $('#EuaDisabled').click(function() {
+                toggleVisibility('#EuaEnabled', '#EuaDisabled');
+                toggleVisibility('#brasilDisabled', '#brasilEnabled');
+                toggleVisibility('#englishVer', '#brasilVer');
             });
-        }
-    });
+            
+            $('#brasilDisabled').click(function() {
+                toggleVisibility('#brasilEnabled', '#brasilDisabled');
+                toggleVisibility('#EuaDisabled', '#EuaEnabled');
+                toggleVisibility('#brasilVer', '#englishVer');
+            });
+            
+            function toggleVisibility(show, hide) {
+                $(hide).fadeOut(400, function() {
+                    $(show).fadeIn(400);
+                });
+            }
+        });
     </script>
 @endsection

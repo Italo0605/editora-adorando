@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 @extends('layouts.head')
+
 <body class="flex flex-col min-h-screen font-didact">
     <header class="bg-[#00296B]">
         <div class="container mx-auto flex justify-between items-center max-w-5xl py-7 items-center">
